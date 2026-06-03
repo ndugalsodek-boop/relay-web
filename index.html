@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Lamp Control</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="card">
+
+    <div class="top">
+
+        <div id="lamp" class="lamp">
+            💡
+        </div>
+
+        <div class="title">
+            Smart Lamp
+        </div>
+
+        <div class="subtitle">
+            ESP8266
+        </div>
+
+    </div>
+
+    <input
+        type="text"
+        id="token"
+        placeholder="Masukkan Auth Token Blynk">
+
+    <button
+        class="save-btn"
+        onclick="simpanToken()">
+        Simpan Token
+    </button>
+
+    <div id="status" class="status">
+        🔴 Lampu Mati
+    </div>
+
+    <div class="buttons">
+
+        <button
+            class="on-btn"
+            onclick="lampuOn()">
+            Nyalakan
+        </button>
+
+        <button
+            class="off-btn"
+            onclick="lampuOff()">
+            Matikan
+        </button>
+
+    </div>
+
+    <input
+        type="number"
+        id="timerMenit"
+        placeholder="Masukkan waktu timer (menit)"
+        min="1">
+
+    <button
+        class="timer-btn"
+        onclick="mulaiTimer()">
+        ⏳ Mulai Timer
+    </button>
+
+    <h3 style="color:white;margin-top:20px;">
+        Jadwal Otomatis
+    </h3>
+
+    <input
+        type="time"
+        id="jamOn"
+        value="18:00">
+
+    <input
+        type="time"
+        id="jamOff"
+        value="06:00">
+
+    <button
+        class="save-btn"
+        onclick="simpanJadwal()">
+        Simpan Jadwal
+    </button>
+
+    <div class="footer">
+        Smart Home Dashboard
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
